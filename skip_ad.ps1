@@ -17,7 +17,7 @@ public class MouseControl {
 Add-Type $code
 
 function MoveAndClick($posX, $posY){
-    [MouseControl]::SetCursorPos($continueX, $continueY)
+    [MouseControl]::SetCursorPos($posX, $posY)
     Start-Sleep -Milliseconds 100
     [MouseControl]::mouse_event([MouseControl]::MOUSEEVENTF_LEFTDOWN, 0, 0, 0, [UIntPtr]::Zero)
     Start-Sleep -Milliseconds 50
